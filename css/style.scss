@@ -114,7 +114,7 @@ nav {
 
 /*-------------------Hero Section----------------------*/
 .hero-section {
-    min-height: 80vh;
+    min-height: 70vh;
     @include flexcenter;
     .hero-content {
         @include flexcenter;
@@ -165,3 +165,166 @@ nav {
     }
 }
 /*--------------Trending-------------------*/
+.trending-section {
+    @include flexcenter;
+    min-height: 70vh;
+
+    h2 {
+        padding-bottom: 2rem;
+    }
+    .trending-content {
+        @include flexspacebetween;
+        .trending-img {
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                font-size: 1.2rem;
+                padding-top: 1rem;
+            }
+        }
+        
+    }
+}
+
+/*----------Featured-----------------*/
+.featured-section {
+    min-height: 100vh;
+    @include flexcenter;
+
+    h2 {
+        padding-bottom: 2rem;
+    }
+
+    .featured-content {
+        @include flexspacebetween;
+        gap: .7rem;
+        .featured-img {
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/*------------Scrolling Image-----------*/
+.horizontal-scroll-section {
+    min-height: 70vh;
+    @include flexcenter;
+    h2 {
+        padding-bottom: 2rem;
+    }
+        .scroll-content {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            .scroll-img {
+              display: inline-block;
+              margin: 0.3rem;
+              a {
+                img {
+                    width: 100%;
+                }
+              }
+            }
+          }
+    
+}
+/*---------------Shop by Sport--------*/
+.shop-sport-section {
+    min-height: 70vh;
+    @include flexcenter;
+    margin-top: 3rem;
+    h2 {
+        padding-bottom: 2rem;
+    }
+    .sport-content {
+        @include flexspacebetween;
+
+        .sport-img {
+            h2 {
+                padding: 1.5rem 0 .5rem 0;
+            }
+            p {
+                padding-bottom: 2rem;
+            }
+            a {
+                color: $offBlack;
+                text-decoration: underline;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/*----------------Membership-----------*/
+.membership-section {
+    margin-top: 4rem;
+    min-height: 53vh;
+    @include flexcenter;
+    
+    h2 {
+        padding-bottom: 2rem;
+    }
+    .nike-member-content {
+        color: #fff;
+        background-image: url(/nike_clone/image/nikemember.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 43vh;
+
+       .content {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        min-height: 40vh;
+        h1 {
+            font-family: sans-serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+           
+        }
+        .button-div {
+            margin-top: 1rem;
+           
+            .btn {
+                padding: 0.5rem 1rem;
+                background: #fff;
+                color: $offBlack;
+                cursor: pointer;
+                border: none;
+                border-radius: 50px 50px;
+                transition: .1s ease-in-out;
+                &:hover {
+                    background: $blurBlack;
+                }
+            }
+        }
+       }
+    }
+   
+}
+/*-------------Exclusive---------------------*/
+.exclusive-section {
+    min-height: 70vh;
+    @include flexcenter;
+    .exclusive-content {
+        @include flexspacebetween;
+        .exclusive-img {
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
