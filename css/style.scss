@@ -1,0 +1,167 @@
+@use "./_mixin.scss" as *;
+@use "./colors.scss" as *;
+
+/*----------Universial-------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    scroll-behavior: smooth;
+}
+.wrapper {
+    width: min(95%, 120rem);
+    margin-inline: auto;
+}
+
+/*------------Navbar------------------*/
+nav {
+    .top-nav {
+        background: $lightGray;
+       
+        .top-nav-content {
+            @include flexspacebetween;
+            .top-logo-left {
+                padding: 0.5rem 0;
+                .logo-icon {
+                    font-size: .8rem;
+                    text-decoration: none;
+                    color: $offBlack;
+                    padding-right: 0.5rem;
+                }
+            }
+            .top-right-nav {
+                .help {
+                    text-decoration: none;
+                    color: $offBlack;
+                    font-size: .8rem;
+                    padding: 0 0.5rem;
+                }
+            }
+        }   
+    }
+    /*-----------------Middle Nav---------*/
+    .middle-nav {
+        padding: 1rem 0;
+        .middle-nav-content {
+            @include flexspacebetween;
+
+            .col {
+                width: 33%;
+            }
+            .middle-nav-logo {
+                .nike {
+                    text-decoration: none;
+                    color: $offBlack;
+                }
+            }
+            .middle-nav-links {
+             @include flexspacebetween; 
+             li {
+                list-style-type: none;
+                padding: 0 .5rem;
+                .link {
+                    text-decoration: none;
+                    color: $offBlack;
+                }
+             }
+            } 
+            .middle-nav-search {
+                text-align: right;
+                input {
+                    outline: none;
+                    border: none;
+                    border-radius: 50px 50px;
+                    padding: 0.55rem 1rem;
+                    background: $lightGray;
+                    position: relative;
+                }
+                .fa-magnifying-glass {
+                    padding: 0.5rem;
+                    background: $lightGray;
+                    position: absolute;
+                    right: 9rem;
+                    border-radius: 0 50px 50px 0;
+                }
+                .f {
+                    padding: 0.5rem;
+                    margin-left: 0.5rem;
+                    border-radius: 50px 50px;
+                    color: $offBlack;
+                    &:hover {
+                        background: $lightGray;
+                    }
+                }
+            }
+            
+        }
+    }
+    .nav-bottom {
+        background: $lightGray;
+        padding: 1rem 0;
+        .nav-bottom-content {
+            text-align: center;
+            small {
+                a {
+                    color: $offBlack;
+                }
+            }
+        }
+    }
+}
+
+/*-------------------Hero Section----------------------*/
+.hero-section {
+    min-height: 80vh;
+    @include flexcenter;
+    .hero-content {
+        @include flexcenter;
+        gap: 1rem;
+        .hero-img-col {
+            border: 2px solid $offBlack;
+            width: 25%;
+            
+            img {
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
+}
+
+/*---------------------Bring the Heat----------------*/
+.bring-heat-section {
+    min-height: 30vh;
+    @include flexcenter;
+
+    .bring-heat-content {
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            padding: 0.5rem 0;
+            font-size: 1.2rem;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .btn {
+            background: $offBlack;
+            color: #fff;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border: none;
+            border-radius: 50px 50px;
+            font-size: 1.2rem;
+            transition: .1s ease-in-out;
+            &:hover {
+                background: $blurBlack;
+            }
+        }
+    }
+}
+/*--------------Trending-------------------*/
