@@ -10,6 +10,7 @@
 }
 body {
     scroll-behavior: smooth;
+    
 }
 .wrapper {
     width: min(95%, 120rem);
@@ -307,7 +308,7 @@ nav {
             }
         }
         .soccer {
-            background-image: url(/nike_clone/image/feature3.webp);
+            background-image: url(/image/feature3.webp);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -318,7 +319,7 @@ nav {
             }
         }
         .national {
-            background-image: url(/nike_clone/image/feature4.webp);
+            background-image: url(/image/feature4.webp);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -407,13 +408,13 @@ nav {
     }
     .nike-member-content {
         color: #fff;
-        background-image: url(/nike_clone/image/nikemember1.webp);
+        background-image: url(/image/nikemember1.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 70vh;
         @include mediaquery950px {
-            background-image: url(/nike_clone/image/nikemember.webp);
+            background-image: url(/image/nikemember.webp);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

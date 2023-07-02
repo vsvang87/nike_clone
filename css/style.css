@@ -1,11 +1,36 @@
+/*------------------Media------------------*/
+/*----------Universial-------------*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  width: min(95%, 120rem);
+  margin-inline: auto;
+}
+
+/*------------Navbar------------------*/
 nav {
-  background: rgb(34, 89, 153);
+  /*-----------------Middle Nav---------*/
 }
-nav .logo-div a {
-  text-decoration: none;
-  color: rgb(241, 241, 241);
+nav .top-nav {
+  background: rgb(238, 238, 238);
+  display: none;
 }
-nav .navbar-container {
+@media (min-width: 950px) {
+  nav .top-nav {
+    display: block;
+  }
+}
+nav .top-nav .top-nav-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,117 +41,80 @@ nav .navbar-container {
       -ms-flex-align: center;
           align-items: center;
 }
-nav .navbar-container ul li {
-  list-style-type: none;
-  -webkit-transition: 0.15s ease-in-out;
-  transition: 0.15s ease-in-out;
-  padding: 1rem;
+nav .top-nav .top-nav-content .top-logo-left {
+  padding: 0.5rem 0;
 }
-nav .navbar-container ul li:hover {
-  background: rgb(209, 209, 96);
-}
-nav .navbar-container ul li a {
+nav .top-nav .top-nav-content .top-logo-left .logo-icon {
+  font-size: 0.8rem;
   text-decoration: none;
-  color: rgb(241, 241, 241);
+  color: rgb(26, 26, 26);
+  padding-right: 0.5rem;
 }
-
-.section-1 {
-  min-height: 60vh;
-  position: relative;
+nav .top-nav .top-nav-content .top-right-nav .help {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
 }
-.section-1::after {
-  content: "";
-  position: absolute;
-  background-image: url(../images/bible.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  inset: 0;
-  z-index: 2;
+nav .middle-nav {
+  padding: 1rem 0;
 }
-.section-1 .hero-container {
-  min-height: 60vh;
+nav .middle-nav .middle-nav-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-
-.section-2 {
-  min-height: 50vh;
-}
-.section-2 .info-container .info-content {
-  border-top: 1px solid gray;
-  padding-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem;
-}
-.section-2 .info-container .info-content .info-col {
+nav .middle-nav .middle-nav-content .col {
   width: 50%;
 }
-.section-2 .info-container .info-content .info-col img {
-  width: 100%;
+@media (min-width: 950px) {
+  nav .middle-nav .middle-nav-content .col {
+    width: 33%;
+  }
 }
-.section-2 .info-container .msg {
-  padding: 0 3rem;
+nav .middle-nav .middle-nav-content .middle-nav-logo .nike {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
 }
-.section-2 .info-container .msg h4 {
-  margin-bottom: 1rem;
+nav .middle-nav .middle-nav-content .middle-nav-links {
+  display: none;
 }
-.section-2 .worship {
-  margin: 2rem 0;
-  min-height: 30vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem;
-  border-top: 1px solid gray;
+@media (min-width: 1150px) {
+  nav .middle-nav .middle-nav-content .middle-nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
-.section-2 .worship .col {
-  width: 50%;
-  text-align: center;
+nav .middle-nav .middle-nav-content .middle-nav-links li {
+  list-style-type: none;
+  padding: 0 0.5rem;
 }
-
-.section-3 {
-  min-height: 50vh;
-  background: rgb(231, 231, 231);
+nav .middle-nav .middle-nav-content .middle-nav-links li .link {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
 }
-
-* {
-  font-family: "Poppins", sans-serif;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+nav .middle-nav .middle-nav-content .middle-nav-search {
+  text-align: right;
 }
-
-body {
-  scroll-behavior: smooth;
+@media (min-width: 950px) {
+  nav .middle-nav .middle-nav-content .middle-nav-search {
+    text-align: right;
+  }
 }
-
-.wrapper {
-  width: min(90%, 100rem);
-  margin-inline: auto;
-}/*# sourceMappingURL=style.css.map */middle-nav .middle-nav-content .middle-nav-search input {
+nav .middle-nav .middle-nav-content .middle-nav-search input {
   display: none;
 }
 @media (min-width: 950px) {
@@ -416,7 +404,7 @@ nav .nav-bottom .nav-bottom-content small a {
   width: 100%;
 }
 .featured-section .featured-content .soccer {
-  background-image: url(/nike_clone/image/feature3.webp);
+  background-image: url(/image/feature3.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -427,7 +415,7 @@ nav .nav-bottom .nav-bottom-content small a {
   width: 55%;
 }
 .featured-section .featured-content .national {
-  background-image: url(/nike_clone/image/feature4.webp);
+  background-image: url(/image/feature4.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -549,7 +537,7 @@ nav .nav-bottom .nav-bottom-content small a {
 }
 .membership-section .nike-member-content {
   color: #fff;
-  background-image: url(/nike_clone/image/nikemember1.webp);
+  background-image: url(/image/nikemember1.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -557,7 +545,7 @@ nav .nav-bottom .nav-bottom-content small a {
 }
 @media (min-width: 950px) {
   .membership-section .nike-member-content {
-    background-image: url(/nike_clone/image/nikemember.webp);
+    background-image: url(/image/nikemember.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
