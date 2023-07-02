@@ -191,24 +191,67 @@ nav {
 
 /*----------Featured-----------------*/
 .featured-section {
-    min-height: 100vh;
+    min-height: 90vh;
     @include flexcenter;
 
     h2 {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
     }
 
     .featured-content {
         @include flexspacebetween;
+        min-height: 70vh;
         gap: .7rem;
         .featured-img {
+         width: 50%;
+            position: relative;
+         .featured-inner {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 2.5rem;
+            color: #fff;
+
+            .btn {
+                padding: 0.5rem 1rem;
+                background: #fff;
+                border: none;
+                border-radius: 50px 50px;
+                cursor: pointer;
+                transition: .1s ease-in-out;
+                &:hover {
+                    background: $darkGray;
+                }
+            }
+         }
             a {
                 img {
                     width: 100%;
                 }
             }
         }
+        .soccer {
+            background-image: url(/nike_clone/image/feature3.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 65vh;
+            h1 {
+                padding: 1rem 0;
+                width: 55%;
+            }
+        }
+        .national {
+            background-image: url(/nike_clone/image/feature4.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 65vh;
+            h1 {
+                padding: 1rem 0;
+            }
+        }
     }
+    
 }
 
 /*------------Scrolling Image-----------*/
@@ -289,8 +332,10 @@ nav {
         min-height: 40vh;
         h1 {
             font-family: sans-serif;
-            font-size: 3rem;
+            font-weight: bold;
+            font-size: 4rem;
             margin-bottom: 0.5rem;
+            width: 30%;
            
         }
         .button-div {
@@ -305,7 +350,7 @@ nav {
                 border-radius: 50px 50px;
                 transition: .1s ease-in-out;
                 &:hover {
-                    background: $blurBlack;
+                    background: $darkGray;
                 }
             }
         }
@@ -315,16 +360,93 @@ nav {
 }
 /*-------------Exclusive---------------------*/
 .exclusive-section {
-    min-height: 70vh;
+    min-height: 80vh;
     @include flexcenter;
     .exclusive-content {
         @include flexspacebetween;
         .exclusive-img {
             a {
+                text-decoration: none;
+                color: $offBlack;
                 img {
                     width: 100%;
                 }
+                p {
+                    padding-bottom: 0.8rem;
+                }
+                
             }
+        }
+    }
+}
+/*------------------Pre Footer----------------*/
+.pre-footer-nav {
+    min-height: 50vh;
+    @include flexcenter;
+
+    .navigation-content {
+        width: 50%;
+        margin: 0 auto;
+        @include flexspacebetween;
+        .content {
+            width: 25%;
+            p {
+                padding-bottom: 0.5rem;
+            }
+            ul {
+                li {
+                    list-style-type: none;
+                    padding: 0.5rem 0;
+                    a {
+                        text-decoration: none;
+                        color: $darkGray;
+                    }
+                }
+            }
+        }
+    }
+}
+/*------------------Footer--------------------*/
+.footer {
+    min-height: 40vh;
+    background: $offBlack;
+    @include flexcenter;
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 80%;
+        margin: 0 auto;
+        .content {
+            @include flexalignstart;
+            .inner-content {
+                padding: 0 2rem;
+                li {
+                    list-style-type: none;
+                    padding: 0.5rem 0;
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+            .footer-icon {
+                color: $offBlack;
+                margin: 0.5rem;
+               
+                i {
+                    background: $darkGray;
+                    padding: 0.5rem;
+                    border-radius: 50px 50px;
+                    font-size: 1.2rem;
+                    transition: .1s ease-in-out;
+                    &:hover {
+                        background: #fff;
+                       }
+                }
+            }
+            
         }
     }
 }
