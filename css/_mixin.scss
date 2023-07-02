@@ -13,3 +13,20 @@
     justify-content: center;
     align-items: flex-start;
 }
+
+/*------------------Media------------------*/
+@mixin mediaquery950px() {
+    @media (min-width: 950px) {
+        @content;
+    }
+}
+@mixin mediaquery1150px() {
+    @media (min-width: 1150px) {
+        @content;
+    }
+}
+@mixin mediaquery1450px {
+    @media (min-width: 1450px) {
+        @content;
+    }
+}

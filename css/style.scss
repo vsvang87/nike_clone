@@ -18,9 +18,13 @@ body {
 
 /*------------Navbar------------------*/
 nav {
+
     .top-nav {
         background: $lightGray;
-       
+        display: none;
+        @include mediaquery950px {
+            display: block;
+        }
         .top-nav-content {
             @include flexspacebetween;
             .top-logo-left {
@@ -49,16 +53,24 @@ nav {
             @include flexspacebetween;
 
             .col {
-                width: 33%;
+                width: 50%;
+                @include mediaquery950px {
+                    width: 33%;
+                }
             }
             .middle-nav-logo {
+              
                 .nike {
                     text-decoration: none;
                     color: $offBlack;
                 }
             }
             .middle-nav-links {
-             @include flexspacebetween; 
+                display: none;
+             
+             @include mediaquery950px {
+                @include flexspacebetween; 
+             }
              li {
                 list-style-type: none;
                 padding: 0 .5rem;
@@ -69,7 +81,11 @@ nav {
              }
             } 
             .middle-nav-search {
-                text-align: right;
+                // text-align: right;
+                display: flex;
+                @include mediaquery950px {
+                    text-align: right;
+                }
                 input {
                     outline: none;
                     border: none;
@@ -116,6 +132,7 @@ nav {
 .hero-section {
     min-height: 70vh;
     @include flexcenter;
+   
     .hero-content {
         @include flexcenter;
         gap: 1rem;
@@ -135,7 +152,7 @@ nav {
 .bring-heat-section {
     min-height: 30vh;
     @include flexcenter;
-
+    padding: 2rem 0;
     .bring-heat-content {
         text-align: center;
 
@@ -149,41 +166,60 @@ nav {
             width: 50%;
             margin: 0 auto;
         }
-        .btn {
-            background: $offBlack;
-            color: #fff;
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            margin: 0.5rem;
-            border: none;
-            border-radius: 50px 50px;
-            font-size: 1.2rem;
-            transition: .1s ease-in-out;
-            &:hover {
-                background: $blurBlack;
+        .shop-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            @include mediaquery950px {
+                flex-direction: row;
             }
+            .btn {
+                background: $offBlack;
+                color: #fff;
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+                margin: 0.5rem;
+                border: none;
+                border-radius: 50px 50px;
+                font-size: 1.2rem;
+                transition: .1s ease-in-out;
+                &:hover {
+                    background: $blurBlack;
+                }
+            }
+
         }
+        
     }
 }
 /*--------------Trending-------------------*/
 .trending-section {
     @include flexcenter;
     min-height: 70vh;
-
+    padding: 2rem 0;
     h2 {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
     }
     .trending-content {
-        @include flexspacebetween;
+        @include mediaquery950px {
+            @include flexspacebetween;
+        }
         .trending-img {
+            margin-top: 2rem;
             a {
+                
                 img {
                     width: 100%;
                 }
             }
             p {
                 font-size: 1.2rem;
-                padding-top: 1rem;
+                
+                @include mediaquery950px {
+                    padding-top: 1rem;
+                }
             }
         }
         
@@ -194,18 +230,25 @@ nav {
 .featured-section {
     min-height: 90vh;
     @include flexcenter;
-
+    padding: 2rem 0;
     h2 {
         padding-bottom: 1rem;
     }
 
     .featured-content {
-        @include flexspacebetween;
+        @include mediaquery950px {
+            @include flexspacebetween;
+        }
         min-height: 70vh;
         gap: .7rem;
         .featured-img {
-         width: 50%;
-            position: relative;
+         width: 100%;
+        position: relative;
+        margin-bottom: .8rem;
+        @include mediaquery950px {
+            width: 50%;
+            margin-bottom: 0;
+        }
          .featured-inner {
             position: absolute;
             bottom: 2.5rem;
@@ -276,7 +319,6 @@ nav {
               }
             }
           }
-    
 }
 /*---------------Shop by Sport--------*/
 .shop-sport-section {
@@ -287,14 +329,28 @@ nav {
         padding-bottom: 2rem;
     }
     .sport-content {
-        @include flexspacebetween;
+        @include mediaquery950px {
+            @include flexspacebetween;
+            gap: 1rem;
+        }
 
         .sport-img {
+            margin-bottom: 2rem;
+            @include mediaquery950px {
+                margin-bottom: 0;
+            }
             h2 {
-                padding: 1.5rem 0 .5rem 0;
+                padding: 0;
+                @include mediaquery950px {
+                    padding: 1.5rem 0 .5rem 0;
+                }
             }
             p {
-                padding-bottom: 2rem;
+                padding: 0.5rem 0;
+                @include mediaquery950px {
+                    padding: 0;
+                    padding-bottom: 2rem;
+                }
             }
             a {
                 color: $offBlack;
@@ -310,33 +366,45 @@ nav {
 /*----------------Membership-----------*/
 .membership-section {
     margin-top: 4rem;
-    min-height: 53vh;
+    min-height: 70vh;
     @include flexcenter;
-    
+   
     h2 {
         padding-bottom: 2rem;
     }
     .nike-member-content {
         color: #fff;
-        background-image: url(/nike_clone/image/nikemember.webp);
+        background-image: url(/nike_clone/image/nikemember1.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 43vh;
+        min-height: 70vh;
+        @include mediaquery950px {
+            background-image: url(/nike_clone/image/nikemember.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
 
        .content {
         padding: 2rem;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-start;
         flex-direction: column;
-        min-height: 40vh;
+        min-height: 70vh;
+       
         h1 {
             font-family: sans-serif;
             font-weight: bold;
-            font-size: 4rem;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
-            width: 30%;
+            width: 100%;
+            @include mediaquery950px {
+                width: 30%;
+                font-size: 4rem;
+            }
            
         }
         .button-div {
@@ -364,17 +432,36 @@ nav {
     min-height: 80vh;
     @include flexcenter;
     .exclusive-content {
-        @include flexspacebetween;
+        margin: .8rem 0;
+        @include mediaquery950px {
+            @include flexspacebetween;
+        }
         .exclusive-img {
+            position: relative;
+            margin: 0 0.5rem 2rem 0.5rem;
+                @include mediaquery950px {
+                    margin: 0 0.5rem 0 0.5rem;
+                }
             a {
                 text-decoration: none;
                 color: $offBlack;
+                
                 img {
                     width: 100%;
                 }
-                p {
-                    padding-bottom: 0.8rem;
+                .ex-info {
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 2rem;
+                    @include mediaquery950px {
+                        bottom: 4rem;
+                        left: 4rem;
+                    }
+                    p {
+                        padding-bottom: 0.8rem;
+                    }
                 }
+                
                 
             }
         }
@@ -382,25 +469,44 @@ nav {
 }
 /*------------------Pre Footer----------------*/
 .pre-footer-nav {
-    min-height: 50vh;
+    min-height: 40vh;
     @include flexcenter;
 
     .navigation-content {
-        width: 50%;
-        margin: 0 auto;
-        @include flexspacebetween;
+
+        @include mediaquery950px {
+            width: 70%;
+            margin: 0 auto;
+            @include flexspacebetween;
+        }
         .content {
-            width: 25%;
+    
+            @include mediaquery950px {
+                width: 70%;
+            }
             p {
-                padding-bottom: 0.5rem;
+                padding-bottom: 2rem;
+                @include mediaquery950px {
+                    padding-bottom: 0.5rem;
+                }
             }
             ul {
+                display: none;
+                @include mediaquery950px {
+                    display: block;
+                }
                 li {
                     list-style-type: none;
                     padding: 0.5rem 0;
                     a {
                         text-decoration: none;
                         color: $darkGray;
+                        @include mediaquery950px {
+                            font-size: .8rem;
+                        }
+                        @include mediaquery1150px {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
@@ -417,12 +523,33 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        width: 80%;
-        margin: 0 auto;
+        flex-direction: column;
+        @include mediaquery1450px {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @include mediaquery1450px {
+            flex-direction: row;
+        }
         .content {
-            @include flexalignstart;
+            
+            @include mediaquery950px {
+                @include flexalignstart;
+            }
+            
+            .get-help {
+                display: none;
+                @include mediaquery1450px {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+            }
             .inner-content {
-                padding: 0 3rem 0 0;
+                padding: 0 3rem 1rem 0;
+               
                 li {
                     list-style-type: none;
                     padding: 0.5rem 0;
@@ -453,20 +580,30 @@ nav {
        
     }
     .copy-right {
+        padding: 1rem 0;
+        @include flexalignstart;
+        flex-direction: column;
+
+        @include mediaquery1450px {
         padding: 2rem 0;
         width: 80%;
-            margin: 0 auto;
+        margin: 0 auto;
+        flex-direction: row;
         @include flexspacebetween;
+        }
+
         .location {
            @include flexcenter;
            gap: 1rem; 
         }
         .copy-content {
             color: #fff;
+            padding: 0.5rem 0;
             a {
                 margin-left: 1rem;
                 small {
                     color: #fff;
+                    
                 }
             }
         }
