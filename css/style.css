@@ -886,4 +886,7 @@ nav .nav-bottom .nav-bottom-content small a {
 }
 .footer .copy-right .copy-content a small {
   color: #fff;
+}
+.footer .copy-right .guides a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
