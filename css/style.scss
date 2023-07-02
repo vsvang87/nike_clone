@@ -467,15 +467,17 @@ nav {
     @include flexcenter;
     .exclusive-content {
         margin: .8rem 0;
+        
         @include mediaquery950px {
             @include flexspacebetween;
         }
+        .middle-img {
+            margin: 0 0.5rem;
+        }
         .exclusive-img {
             position: relative;
-            margin: 0 0.5rem 2rem 0.5rem;
-                @include mediaquery950px {
-                    margin: 0 0.5rem 0 0.5rem;
-                }
+               
+            
             a {
                 text-decoration: none;
                 color: $offBlack;

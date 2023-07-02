@@ -627,14 +627,11 @@ nav .nav-bottom .nav-bottom-content small a {
             align-items: center;
   }
 }
+.exclusive-section .exclusive-content .middle-img {
+  margin: 0 0.5rem;
+}
 .exclusive-section .exclusive-content .exclusive-img {
   position: relative;
-  margin: 0 0.5rem 2rem 0.5rem;
-}
-@media (min-width: 950px) {
-  .exclusive-section .exclusive-content .exclusive-img {
-    margin: 0 0.5rem 0 0.5rem;
-  }
 }
 .exclusive-section .exclusive-content .exclusive-img a {
   text-decoration: none;
