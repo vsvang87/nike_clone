@@ -49,9 +49,9 @@ nav {
     /*-----------------Middle Nav---------*/
     .middle-nav {
         padding: 1rem 0;
+        
         .middle-nav-content {
             @include flexspacebetween;
-
             .col {
                 width: 50%;
                 @include mediaquery950px {
@@ -68,7 +68,7 @@ nav {
             .middle-nav-links {
                 display: none;
              
-             @include mediaquery950px {
+             @include mediaquery1150px {
                 @include flexspacebetween; 
              }
              li {
@@ -81,25 +81,41 @@ nav {
              }
             } 
             .middle-nav-search {
-                // text-align: right;
-                display: flex;
+                text-align: right;
                 @include mediaquery950px {
                     text-align: right;
                 }
                 input {
-                    outline: none;
-                    border: none;
-                    border-radius: 50px 50px;
-                    padding: 0.55rem 1rem;
-                    background: $lightGray;
-                    position: relative;
+                    display: none;
+                    @include mediaquery950px {
+                        display: inline-flex;
+                        outline: none;
+                        border: none;
+                        border-radius: 50px 50px;
+                        padding: 0.55rem 1rem;
+                        background: $lightGray;
+                    }
+                   
                 }
+                a {
+                    text-decoration: none;
+                }
+                
                 .fa-magnifying-glass {
+                    cursor: pointer;
                     padding: 0.5rem;
-                    background: $lightGray;
-                    position: absolute;
-                    right: 9rem;
-                    border-radius: 0 50px 50px 0;
+                    margin-left: 0.5rem;
+                    border-radius: 50px 50px;
+                    color: $offBlack;
+                    &:hover {
+                        background: $lightGray;
+                    }
+                    @include mediaquery950px {
+                        padding: 0.5rem;
+                        position: absolute;
+                        right: 8.5rem;
+                        border-radius: 0 50px 50px 0;
+                    }
                 }
                 .f {
                     padding: 0.5rem;
@@ -108,6 +124,18 @@ nav {
                     color: $offBlack;
                     &:hover {
                         background: $lightGray;
+                    }
+                }
+                .fa-bars {
+                    
+                    padding: 0.5rem;
+                    border-radius: 50px 50px;
+                    color: $offBlack;
+                    &:hover {
+                        background: $lightGray;
+                    }
+                    @include mediaquery950px {
+                        display: none;
                     }
                 }
             }
@@ -132,19 +160,24 @@ nav {
 .hero-section {
     min-height: 70vh;
     @include flexcenter;
-   
+    padding: 2rem 0;
     .hero-content {
         @include flexcenter;
-        gap: 1rem;
-        .hero-img-col {
-            border: 2px solid $offBlack;
-            width: 25%;
-            
-            img {
+        width: 100%;
+       
+
+            picture {
                 width: 100%;
-                height: 500px;
+                img {
+                    width: 100%;
+                    min-height: 800px;
+                    object-fit: cover;
+                    @include mediaquery950px {
+                        min-height: auto;
+                        object-fit: contain;
+                    } 
+                }
             }
-        }
     }
 }
 

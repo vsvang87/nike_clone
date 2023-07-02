@@ -30,3 +30,9 @@
         @content;
     }
 }
+
+@mixin mediaquery1550px {
+    @media (min-width: 1550px) {
+        @content;
+    }
+}

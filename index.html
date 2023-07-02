@@ -59,14 +59,16 @@
             </ul>
 
             <div class="middle-nav-search col">
-              <input type="text" placeholder="Search" /><i
-                class="fa-solid fa-magnifying-glass"
-              ></i>
+              <i class="fa-solid fa-magnifying-glass"></i
+              ><input type="text" placeholder="Search" />
               <a href="#">
                 <i class="fa-regular fa-heart f"></i>
               </a>
               <a href="#">
                 <i class="fa-solid fa-bag-shopping f"></i>
+              </a>
+              <a href="#">
+                <i class="fa-sharp fa-solid fa-bars"></i>
               </a>
             </div>
           </div>
@@ -87,18 +89,16 @@
     <section class="hero-section">
       <div class="wrapper">
         <div class="hero-content">
-          <div class="hero-img-col">
-            <img src="./image/nikeairmax.webp" alt="" />
-          </div>
-          <div class="hero-img-col">
+          <!--------Change Image on different width----->
+          <picture>
+            <source
+              media="(min-width: 1150px)"
+              srcset="./image/nikebanner3.jpg"
+              class="img"
+            />
+
             <img src="./image/nikeguy.webp" alt="" />
-          </div>
-          <div class="hero-img-col">
-            <img src="./image/nikeairmaxgreen.webp" alt="" />
-          </div>
-          <div class="hero-img-col">
-            <img src="./image/nikeguy2.jpg" alt="" />
-          </div>
+          </picture>
         </div>
       </div>
     </section>
