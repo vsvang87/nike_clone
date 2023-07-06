@@ -237,11 +237,13 @@ nav {
         padding-bottom: 1rem;
     }
     .trending-content {
+        
         @include mediaquery950px {
             @include flexspacebetween;
         }
         .trending-img {
-            margin-top: 2rem;
+            margin-top: 1rem;
+            padding: 0 .5rem;
             a {
                 
                 img {
@@ -400,7 +402,7 @@ nav {
 /*----------------Membership-----------*/
 .membership-section {
     margin-top: 4rem;
-    min-height: 70vh;
+    min-height: 40vh;
     @include flexcenter;
    
     h2 {
@@ -412,7 +414,7 @@ nav {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 70vh;
+        min-height: 40vh;
         @include mediaquery950px {
             background-image: url(/image/nikemember.webp);
             background-position: center;
@@ -427,7 +429,7 @@ nav {
         justify-content: flex-end;
         align-items: flex-start;
         flex-direction: column;
-        min-height: 70vh;
+        min-height: 40vh;
        
         h1 {
             font-family: sans-serif;
@@ -463,7 +465,7 @@ nav {
 }
 /*-------------Exclusive---------------------*/
 .exclusive-section {
-    min-height: 80vh;
+    min-height: 75vh;
     @include flexcenter;
     .exclusive-content {
         margin: .8rem 0;
@@ -476,8 +478,7 @@ nav {
         }
         .exclusive-img {
             position: relative;
-               
-            
+                 
             a {
                 text-decoration: none;
                 color: $offBlack;

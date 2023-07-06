@@ -323,7 +323,8 @@ nav .nav-bottom .nav-bottom-content small a {
   }
 }
 .trending-section .trending-content .trending-img {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
 }
 .trending-section .trending-content .trending-img a img {
   width: 100%;
@@ -521,7 +522,7 @@ nav .nav-bottom .nav-bottom-content small a {
 /*----------------Membership-----------*/
 .membership-section {
   margin-top: 4rem;
-  min-height: 70vh;
+  min-height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,7 +542,7 @@ nav .nav-bottom .nav-bottom-content small a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 70vh;
+  min-height: 40vh;
 }
 @media (min-width: 950px) {
   .membership-section .nike-member-content {
@@ -566,7 +567,7 @@ nav .nav-bottom .nav-bottom-content small a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 70vh;
+  min-height: 40vh;
 }
 .membership-section .nike-member-content .content h1 {
   font-family: sans-serif;
@@ -600,7 +601,7 @@ nav .nav-bottom .nav-bottom-content small a {
 
 /*-------------Exclusive---------------------*/
 .exclusive-section {
-  min-height: 80vh;
+  min-height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
